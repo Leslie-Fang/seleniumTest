@@ -1,10 +1,12 @@
+package test.mytest;
+
 class animal{
     private static int numbers=0;
     public animal(){
         numbers +=1;
     }
     public void sayNumber(){
-        System.out.println(String.format("There are %d animals",numbers));
+        System.out.println(String.format("There are %d animals now",numbers));
     }
 }
 class person extends animal{
