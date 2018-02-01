@@ -1,1 +1,2 @@
-Main-Class: test.mytest.test
+Main-Class: intel.dcg.leslie.main
+Class-Path: ../Package/selenium-server-standalone-3.8.1.jar ../Package/testng-6.8.5.jar

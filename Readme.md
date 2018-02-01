@@ -23,3 +23,6 @@ TestNG作为测试框架： http://testng.org/doc/documentation-main.html#introd
 
 使用Maven作为包管理工具：
 
+
+## TestNG
+测试人员一般用TestNG来写自动化测试。  开发人员一般用JUnit写单元测试。
