@@ -7,14 +7,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
 public class TestSelenium {
-    @BeforeClass
-    public void beforeClass() {
-        System.out.println("Test Class Begin!");
-    }
+    public static  WebDriver driver = null;
 
-    @AfterClass
-    public void afterClass() {
-        System.out.println("Test Class Done!");
+    @BeforeSuite
+    public void beforeSuite() {
+        System.out.println("Suite Begin!");
+    }
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("Suite Done!");
     }
 
     @BeforeTest
@@ -27,12 +28,34 @@ public class TestSelenium {
         System.out.println("Test Done!");
     }
 
-    @Test
-    public void testGoogleSearch(){
+    @BeforeClass
+    public void beforeClass() {
+        System.out.println("Class Begin!");
         // Optional, if not specified, WebDriver will search your path for chromedriver.
         System.setProperty("webdriver.chrome.driver", "/Users/leslie/testcode/javaTestCode/ChromeDriver/chromedriver");
         //System.setProperty("webdriver.chrome.driver", Para.chromeDriverPath);
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
+    }
+
+    @AfterClass
+    public void afterClass() {
+        System.out.println("Class Done!");
+        driver.quit();
+    }
+
+    @BeforeMethod
+    public void beforeMethod() {
+        System.out.println("Method Begin!");
+    }
+
+    @AfterMethod
+    public void afterMethod() {
+        System.out.println("Method Done!");
+    }
+
+
+    @Test
+    public void testGoogleSearch(){
         try{
             Thread.sleep(5000);
         }
@@ -50,15 +73,14 @@ public class TestSelenium {
         catch(Exception ex){
             ex.printStackTrace();
         }
-        driver.quit();
     }
 
     @Test
     public void testGoogleSearch2(){
-        // Optional, if not specified, WebDriver will search your path for chromedriver.
-        System.setProperty("webdriver.chrome.driver", "/Users/leslie/testcode/javaTestCode/ChromeDriver/chromedriver");
-        //System.setProperty("webdriver.chrome.driver", Para.chromeDriverPath);
-        WebDriver driver = new ChromeDriver();
+//        // Optional, if not specified, WebDriver will search your path for chromedriver.
+//        System.setProperty("webdriver.chrome.driver", "/Users/leslie/testcode/javaTestCode/ChromeDriver/chromedriver");
+//        //System.setProperty("webdriver.chrome.driver", Para.chromeDriverPath);
+//        WebDriver driver = new ChromeDriver();
         try{
             Thread.sleep(5000);
         }
@@ -76,6 +98,6 @@ public class TestSelenium {
         catch(Exception ex){
             ex.printStackTrace();
         }
-        driver.quit();
+//        driver.quit();
     }
 }

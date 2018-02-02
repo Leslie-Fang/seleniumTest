@@ -8,6 +8,11 @@
                     <include name="testGoogleSearch2" />
                 </methods>
             </class>
+            <class name="intel.dcg.leslie.TestClick">
+                <methods>
+                    <include name="testD3" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

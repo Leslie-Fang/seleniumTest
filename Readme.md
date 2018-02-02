@@ -21,8 +21,13 @@ This repo is for the learning of java.
 Selenium 模拟对浏览器的操作：http://www.seleniumhq.org/
 TestNG作为测试框架： http://testng.org/doc/documentation-main.html#introduction
 
-使用Maven作为包管理工具：
-
+## 使用Maven作为包管理工具：
+https://maven.apache.org/
 
 ## TestNG
 测试人员一般用TestNG来写自动化测试。  开发人员一般用JUnit写单元测试。
+http://testng.org/doc/documentation-main.html
+
+## Selenium
+http://www.seleniumhq.org/docs/
+
